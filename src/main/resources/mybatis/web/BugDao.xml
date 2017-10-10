@@ -1,0 +1,79 @@
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.dao.BugDao">
+	<!--设置User类和数据库中表的字段一一对应 -->
+	<resultMap id="bugResultMap" type="com.dms.entity.Bug">
+		<result column="bug_id" property="bug_id" jdbcType="INTEGER" />
+		<result column="bug_summary" property="bug_summary" jdbcType="VARCHAR" />
+		<result column="bug_priority" property="bug_priority"
+			jdbcType="VARCHAR" />
+		<result column="bug_os" property="bug_os" jdbcType="VARCHAR" />
+		<result column="bug_description" property="bug_description"
+			jdbcType="VARCHAR" />
+		<result column="bug_comment" property="bug_comment" jdbcType="VARCHAR" />
+		<result column="pon_id" property="pon_id" jdbcType="INTEGER" />
+		<result column="pro_id" property="pro_id" jdbcType="INTEGER" />
+		<result column="reporter_id" property="reporter_id" jdbcType="INTEGER" />
+		<result column="handler_id" property="handler_id" jdbcType="INTEGER" />
+		<result column="bug_status" property="bug_status" jdbcType="INTEGER" />
+ 
+	</resultMap>
+	<!-- 查询单条记录 -->
+	<select id="selectById" parameterType="com.dms.entity.Bug"
+		resultMap="bugResultMap">
+		select *
+		from bug
+		where bug_id=#{bug_id}
+	</select>
+
+	<select id="selectByName" parameterType="com.dms.entity.Bug"
+		resultMap="bugResultMap">
+		select *
+		from bug
+		where bug_summary=#{bug_summary}
+	</select>
+	<insert id="insertBug" parameterType="com.dms.entity.Bug">
+		insert into bug
+		(bug_summary,pro_id,bug_os,bug_description,bug_priority,pon_id,bug_comment,reporter_id,handler_id,bug_status,submite_time) values
+		(#{bug_summary},#{pro_id},#{bug_os},#{bug_description},#{bug_priority},#{pon_id},#{bug_comment},#{reporter_id},#{handler_id},#{bug_status},#{submite_time})
+	</insert>
+
+	<update id="updateBug" parameterType="com.dms.entity.Bug">
+		update bug
+		set
+		bug_summary=#{bug_summary},
+		pro_id= #{pro_id},
+		bug_os =#{bug_os},
+		bug_description=#{bug_description},
+		bug_priority=#{bug_priority},
+		pon_id=#{pon_id},
+		bug_comment=#{bug_comment},
+		reporter_id=#{reporter_id},
+		handler_id=#{handler_id},
+		bug_status=#{bug_status},
+	    submite_time=#{submite_time}
+		where
+		bug_id = #{bug_id}
+	</update>
+	
+	<select id="buglist" resultMap="bugResultMap">
+		select * from bug
+	</select>
+
+	<select id="selectBypro_id" resultMap="bugResultMap">
+		select * from bug where pro_id=#{pro_id}
+	</select>
+
+
+	<select id="selectBypon_id" resultMap="bugResultMap">
+		select * from bug where pon_id=#{pon_id}
+	</select>
+	
+
+	<delete id="deleteById" parameterType="com.dms.entity.Bug">
+		delete from bug
+		where
+		bug_id=#{bug_id}
+	</delete>
+
+</mapper>

@@ -1,0 +1,55 @@
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.dao.FileDao">
+	<!--设置User类和数据库中表的字段一一对应 -->
+	<resultMap id="fileResultMap" type="com.dms.entity.Files">
+		<result column="file_id" property="file_id" jdbcType="INTEGER" />
+		<result column="file_name" property="file_name" jdbcType="VARCHAR" />
+		<result column="bug_id" property="bug_id" jdbcType="INTEGER" />
+		<result column="user_id" property="user_id" jdbcType="INTEGER" />
+	</resultMap>
+	<!-- 查询单条记录  parameterType="com.dms.entity.Files"-->
+	<select id="selectById" 
+		resultMap="fileResultMap">
+		select *
+		from file
+		where file_id=#{file_id}
+	</select>
+
+ 
+	<!-- 插入文件 -->
+	<insert id="insertFile" parameterType="com.dms.entity.Files" >
+		insert into file
+		(file_name,bug_id,user_id) values
+		(#{file_name},#{bug_id},#{user_id})
+	</insert>
+	 	<!--更新文件 -->
+	<update id="updateFile"  parameterType="com.dms.entity.Files" >
+		update file
+		set file_name
+		= #{file_name},
+		bug_id= #{bug_id},
+		user_id = #{user_id}
+		where file_id = #{file_id}
+	</update>
+	
+		<!-- 查询全部文件 -->
+	<select id="filelist" resultMap="fileResultMap">
+		select * from file
+	</select>
+		<!-- 查询缺陷的全部附件-->
+	<select id="selectByBug" resultMap="fileResultMap">
+		select * from file 	where bug_id = #{bug_id}
+	</select>
+	
+		<!-- 查询用户附件-->
+	<select id="selectByuser" resultMap="fileResultMap">
+		select * from file 	where user_id = #{user_id}
+	</select>
+		<!-- 查询删除附件-->
+	<delete id="deleteById"  parameterType="com.dms.entity.Files">
+    delete	from file
+		where file_id=#{file_id}
+	</delete>
+
+</mapper>

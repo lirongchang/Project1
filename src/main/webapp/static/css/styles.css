@@ -1,0 +1,905 @@
+
+body
+{
+   margin: 0;
+   padding: 0;
+   background-color: white;
+  
+   background-repeat: repeat-x;
+   font-family: Verdana, Arial, sans-serif;
+}
+
+ 
+
+.canvas
+{
+   position: relative;
+}
+
+.logo
+{
+   top: 20px;
+   position: absolute;
+	z-index:2;
+   padding-left: 17px;
+}
+
+.logoHome
+{
+   top: 25px;
+   position:absolute;
+	z-index:2;
+   padding-left: 3px;
+}
+
+.adminMiniMenu
+{
+   position: absolute;
+   z-index: 4;
+   top: 15px;
+   text-align: right;
+   width: 368px;
+   font-size: 10px;
+   color: white;
+}
+
+.adminMiniMenu a,.adminMiniMenu a:link,.adminMiniMenu a:visited
+{
+   font-size: 10px;
+   color: white;
+   padding-right: 15px;
+   text-decoration: none;
+}
+
+.adminMiniMenu a:hover
+{
+   color: #FF6600;
+}
+
+/** miniMenu */
+
+.miniMenu
+{
+   position: absolute;
+   z-index: 4;
+   top: 170px;
+   text-align: right;
+   font-size: 0.8em;
+   font-family: Geneva, Arial, Helvetica, san-serif;
+   padding-bottom: 20px;
+   padding-left: 500px;
+}
+
+/* subNav */
+#snav{
+  vertical-align: top;
+}
+.subNavback
+{
+   /*text-align: center;*/
+   margin: 0 0 0 0px;
+   /*padding-top: 3px;*/
+   height: 11;
+   font-size: 12px;
+   font-family: Arial, Helvetica, sans-serif;
+   white-space: nowrap;
+   color: #003399;
+}
+.subNav
+{
+   text-align: center;
+   margin: 0 0 0 0px;
+   padding-top: 3px;
+   height: 11;
+   font-size: 12px;
+   font-family: Arial, Helvetica, sans-serif;
+   white-space: nowrap;
+   color: #003399;
+   position: absolute;
+   z-index: 100;
+}
+
+.subNav ul
+{
+   margin: 0 0 0 0px;
+   padding: 0;
+}
+
+.subNav li
+{
+   list-style-type: none;
+   display: inline;
+}
+
+.subNav li a,.subNav li a:link,.subNav li a:visited
+{
+    text-decoration: none;
+    color: #003399;
+    padding-left: 0px;
+    padding-right: 15px;
+    letter-spacing: .02em;
+}
+
+.subNav li a:hover
+{
+   color: #FF6600;
+}
+
+.navCurrent
+{
+   color: #FF6600;
+}
+
+
+/* content */
+
+.content
+{
+   padding: 10px 30px;
+   font-size: 13px;
+   line-height: 16px;
+}
+
+
+/* headings */
+
+h1
+{
+   color: #003399;
+   font-size: 1.3em;
+   font-weight: bold;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+h2
+{
+   color: #003399;
+   font-size: 1.1em;
+   font-weight: bold;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+h2 a:link, h2 a:visited
+{
+   color: #003399;
+   text-decoration: underline;
+}
+
+h3
+{
+   color: #003399;
+   font-size: 1em;
+   font-weight: bold;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+h4
+{
+   color: #003399;
+   font-size: 1.1em;
+   font-weight: normal;
+   margin-top: 15px;
+   margin-bottom: 5px;
+}
+
+/* footer */
+
+.footer
+{
+   clear: both;
+   padding-bottom: 10px;
+   padding-top: 3px;
+   color: gray;
+   font-size: .7em;
+   line-height: 1.2em;
+}
+
+.footer a:link
+{
+   color: gray;
+}
+
+.footer a:visited
+{
+   color: gray;
+}
+
+/** articles */
+
+.articleTable
+{
+   width: 100%;
+   clear: right;
+}
+
+.articleLeftColumn
+{
+   padding-right: 0px;
+   vertical-align: top;
+}
+
+.articleContentColumn
+{
+}
+
+.articleBody
+{
+   padding-bottom: 0em;
+   padding-right: 30px;
+   padding-left: 0;
+}
+
+.articleBody li
+{
+   padding-bottom: 1em;
+}
+
+.articleAttachIcon
+{
+   padding-left: 0;
+   padding-right: 15px;
+}
+
+.leftColImage
+{
+   border: none;
+   text-align: left;
+   margin: 20px;
+}
+
+.articleEmbeddedImage
+{
+   float: right;
+   padding: 0 0px 25px 30px;
+}
+
+
+.articleEmbeddedImageOnly
+{
+   padding: 0 0 30px 0;
+   float: left;
+}
+
+
+#bioListTable
+{
+   width: 600px;
+   font-size: 100%;
+
+}
+
+#bioListTable td
+{
+   text-align: center;
+}
+
+.majorDonorsTable
+{
+   width: 100%;
+   padding-left: 10px;
+}
+
+.majorDonorsTable td
+{
+   padding: 5px;
+   text-align: center;
+}
+
+.placeListDetail
+{
+   line-height: 1.5em;
+   width: 400px;
+}
+
+.chartTable
+{
+   margin-top: 10px;
+   background: black;
+}
+
+.chartTable th
+{
+   padding: 5px;
+   color: yellow;
+   background: #003399;
+}
+
+.chartTable td
+{
+   padding: 15px;
+   background: white;
+}
+
+.introTable
+{
+   padding: 20px 0 20px 0;
+}
+
+.introTable td
+{
+   vertical-align: top;
+   padding: 0 20px 0 0px;
+   font-size: 1.1em;
+   line-height: 1.5em;
+}
+
+.introTable h2
+{
+   margin-top: 0;
+}
+
+.smallAttachLink
+{
+   padding: 0 0 0 40px;
+   color: #C0C0C0;
+   font-size: 75%;
+}
+
+.articleCategoryLinks
+{
+   padding: 10px;
+   margin: 0;
+   border: 1px solid #88BBEE;
+   color: #003399;
+   font-size: 90%;
+}
+
+.articleCategoryLinks a:link, .articleCategoryLinks a:visited, .articleCategoryLinks a:hover
+{
+   color: #003399;
+}
+
+.articleCategoryCounts
+{
+   color: #909090;
+}
+
+.articleCategoryGroup
+{
+   margin-top: 30px;
+}
+
+.articleTagLinks
+{
+   padding: 10px;
+   margin: 0;
+   border: 1px solid #88BBEE;
+   color: #003399;
+}
+
+.articleTagLinks a, articleTagLinks a:link, .articleTagLinks a:visited, .articleTagLinks a:hover
+{
+   color: #003399;
+   padding: 5px;
+   line-height: 2.5em;
+}
+
+.discussForms table
+{
+   padding-left: 15px;
+
+}
+.discussForms h2
+{
+   padding-top: 25px;
+}
+
+.discussForms td
+{
+   padding: 5px 0;
+}
+
+.discussForms .label
+{
+   width: 30%;
+}
+
+.message
+{
+   text-align: left;
+}
+
+.downloadTable
+{
+   margin-top: 10px;
+   background: gray;
+   margin-left: 0px;
+}
+
+.downloadTable th
+{
+   padding: 10px;
+   color: yellow;
+   background: #003399;
+}
+
+.downloadTable td
+{
+   padding: 10px;
+   background: white;
+   font-size: 120%;
+}
+
+.blogTable
+{
+   width: 100%;
+   padding-left: 5px;
+}
+
+.blogContent
+{
+   padding-right: 35px;
+}
+
+.callout
+{
+   border: 1px solid darkgray;
+   background: #F2F8FB;
+   width: 100%;
+   padding: 20px;
+   padding-top: 0;
+   padding-bottom: 10px;
+   vertical-align: top;
+   font-size: 95%;
+}
+
+.callout h3
+{
+   padding: 5px 0;
+}
+
+.entryDate
+{
+   padding-right: 20px;
+   padding-bottom: 5px;
+   margin-bottom: 30px;
+   font-size: 1.1em;
+   line-height: 1em;
+   color: #666666;
+   border-bottom: 1px solid #666666
+}
+
+.entryTitle      { font-size: 1em; font-weight: bold; color: #003399; }
+.entryText       { font-size: 1em; }
+.entryLinks      { font-size:  95%; }
+.responseHeader  { font-size: 95%; font-weight: bold; color: #003399; }
+.responseText    { font-size: 95%; }
+.responseAuthor  { font-size:  90%; }
+.linkText        { font-size: 90%; }
+
+
+.mailingContent
+{
+   padding-right: 20px;
+}
+
+.mailingContent h2
+{
+   margin-top: 20px;
+}
+
+.mailingContent h3
+{
+   font-size: 95%;
+   font-weight: normal;
+   margin-bottom: 20px;
+}
+
+.mailingListTable h2 a:link, .mailingListTable h2 a:visited
+{
+   color: blue;
+}
+
+.mailingBanner
+{
+   width: 500px;
+}
+
+.mailingTocContentsCell small
+{
+   font-size: 100%;
+   line-height: 180%;
+}
+
+.mailingListTable
+{
+   padding: 10px;
+   margin: 10px 0;
+   width: 500px;
+}
+
+blockquote { display: block; color: #CC3333; margin: 0 2em; }
+
+.eventNuggetTable
+{
+   width: 500px;
+   padding-bottom: 10px;
+   border-top: 1px solid #CCCCCC;
+}
+
+.eventNuggetTable td
+{
+   padding: 10px;
+   vertical-align: top;
+}
+
+.milestones
+{
+   padding-bottom: 20px;
+}
+
+.milestones li
+{
+   padding: 5px 0;
+}
+
+.homeCollage
+{
+   color: #003399;
+}
+
+.homeCollage
+{
+   color: #003399;
+   padding: 20px 0 20px 8px;
+   line-spacing: 150%;
+}
+
+.homeCollage td
+{
+   padding: 0;
+}
+
+.homeCollage h1
+{
+   font-size: 160%;
+   font-weight: normal;
+}
+
+.homeCollage ul
+{
+   list-style-image: url( /images/homeBullet.png );
+   padding: 10px 20px;
+}
+
+.homeCollage li
+{
+   padding-bottom: 20px;
+   font-size: 100%;
+}
+
+.sitemap
+{
+   padding-left: 50px;
+   width: 100%;
+}
+
+
+.sitemap td
+{
+   padding: 15px 0;
+   vertical-align: top;
+}
+
+.sitemap li
+{
+   line-height: 2em;
+}
+
+.underNavBanner
+{
+   margin-top: -15px;
+   margin-left: 304px;
+   margin-right: 30px;
+   text-align: center;
+   font-size: 1em;
+   color: #003399;
+}
+
+/** showcaseViewMenu */
+
+.showcaseViewMenu
+{
+   position: absolute;
+   z-index: 4;
+   top: 155px;
+   text-align: right;
+   font-size: 0.8em;
+   font-family: Geneva, Arial, Helvetica, san-serif;
+   padding-bottom: 20px;
+   padding-left: 322px;
+}
+
+.showcaseViewMenu a,.showcaseViewMenu a:link,.showcaseViewMenu a:visited
+{
+   padding-left: 3px;
+   padding-right: 3px;
+   color: #003399;
+}
+
+.showcaseViewMenu b
+{
+   padding-left: 3px;
+   padding-right: 3px;
+   color: #003399;
+}
+
+.showcaseListBarTable
+{
+   width: 100%;
+   margin: 0;
+   padding: 2px;
+   padding-bottom: 4px;
+   border: 1px solid #88BBEE;
+}
+
+.articleDate
+{
+   color: black;
+   font-size: 0.7em;
+   font-weight: normal;
+}
+
+botNavLinks li a,.botNavLinks li a:link,.botNavLinks li a:visited
+{
+   color: #003399;
+}
+
+.botNavLinks li a:hover
+{
+   color: #FF6600;
+}
+
+.showcaseProject
+{
+   padding-left: 20px;
+}
+
+.showcaseProject h3
+{
+   margin-top: 25px;
+}
+
+.showcaseProject p
+{
+   margin-top: 15px;
+}
+
+.showcaseProject .commentList
+{
+   font-size: 90%;
+   padding-bottom: 0;
+}
+
+.showcaseProject .commentTable h3
+{
+   margin-top: 10px;
+   margin-bottom: 0;
+}
+
+.showcaseProject .commentTable p
+{
+   padding-bottom: 5px;
+}
+
+.showcaseProject .catListTable
+{
+   width: 100%;
+}
+
+.showcaseProject .catListTable td
+{
+   vert-align: top;
+   padding-bottom: 0;
+}
+
+.showcaseProject .commentTable .articleDate
+{
+   font-size: 90%;
+}
+
+.articleAccountLink
+{
+}
+
+.articleAccountLink img
+{
+}
+
+.showcaseProject .commentTable .articleAccountLink
+{
+   font-size: 100%;
+}
+
+.mailingLogo
+{
+   padding: 0 20px 0px 0px;
+}
+
+.mailingButton
+{
+   padding-bottom: 0;
+}
+
+.mailingBanner
+{
+   width: 100%;
+
+}
+
+.mailingBannerTable
+ {
+    padding: 0px;
+    width: 100%;
+ }
+
+.projectData
+{
+   line-height: 1.5em;
+}
+
+.projectAdminButtons
+{
+   padding-top: 25px;
+   width: 100%;
+}
+
+.projectAdminButtons img
+{
+   padding-right: 15px;
+}
+
+.voteSelect
+{
+   padding: 0 0 0 5px;
+   margin: 0;
+   margin-left: 10px;
+}
+
+.mojoLevelTable
+{
+   padding-left: 40px;
+}
+
+.mojoLevelTable td
+{
+   padding: 5px;
+}
+
+.articleTitlePrivate, articleTitlePrivate a,.articleTitlePrivate a:link,.articleTitlePrivate a:visited
+{
+   color: green;
+}
+
+.articleTitleWaiting, articleTitleWaiting a,.articleTitleWaiting a:link,.articleTitleWaiting a:visited
+{
+   color: darkviolet;
+}
+
+.articleTitleUnApproved, articleTitleUnApproved a,.articleTitleUnApproved a:link,.articleTitleUnApproved a:visited
+{
+   color: red;
+}
+
+.badge
+{
+   position: absolute;
+   z-index: 2;
+   text-align: right;
+   left: 612px;
+   top: -22px;
+}
+
+.projectPublicButton
+{
+   position: absolute;
+   z-index: 2;
+   text-align: right;
+   left: 480px;
+   top: -50px;
+}
+
+.projectDeleteButton
+{
+   position: absolute;
+   z-index: 2;
+   text-align: right;
+   left: 395px;
+   top: -50px;
+}
+
+.articlePrevUri
+{
+   font-size: 0.8em;
+   padding-bottom: 2em;
+}
+
+.squeakerForm td
+{
+   padding: 5px;
+}
+
+.squeakerForm .label
+{
+   text-align: right;
+}
+
+.squeakerButton
+{
+   position: absolute;
+   z-index: 2;
+   text-align: right;
+   left: 370px;
+   top: -280px;
+}
+
+.addYourNameButton
+{
+   position: absolute;
+   z-index: 2;
+   text-align: right;
+   left: 470px;
+   top: -55px;
+}
+
+.squeakersTable
+{
+   background: #EEEEEE;
+   padding: 10px 13px 0 13px;
+   width: 100%;
+   margin-bottom: 2em;
+}
+
+.squeakersTable .name
+{
+   font-size: 1.2em;
+   color: #003399;
+}
+
+.callout .name
+{
+   font-size: 1.2em;
+   color: #003399;
+}
+
+.squeakersTable .location
+{
+   color: #003399;
+}
+
+.squeakersTable .date
+{
+   color: #003399;
+   font-size: 0.9em;
+   font-weight: normal;
+}
+
+.squeakersTable .since
+{
+   font-size: 0.8em;
+   font-weight: normal;
+}
+
+.squeakersTable p
+{
+
+}
+.squeakersListBarTable
+{
+   width: 100%;
+   margin: 0;
+   padding: 2px;
+   padding-bottom: 6px;
+   border: 1px solid #88BBEE;
+   margin-bottom: 25px;
+}
+
+
+.googleTranslateMarker, googleTranslateMarker a,.googleTranslateMarker a:link,.googleTranslateMarker a:visited
+{
+   font-size: 0.8em;
+   color: gray;
+}

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	 xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="    
+               http://www.springframework.org/schema/beans    
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd    
+               http://www.springframework.org/schema/aop    
+               http://www.springframework.org/schema/aop/spring-aop-3.0.xsd  
+               http://www.springframework.org/schema/context    
+               http://www.springframework.org/schema/context/spring-context-3.0.xsd
+               http://www.springframework.org/schema/tx 
+			   http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- 引入jdbc配置文件 -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:db.properties</value>
+				<!--要是有多个配置文件，只需在这里继续添加即可 -->
+			</list>
+		</property>
+	</bean> 
+	<!-- 配置数据源 -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<!-- 不使用properties来配置 -->
+		<!-- 
+			<property name="driverClassName" value="com.mysql.jdbc.Driver" /> 
+			<property name="url" value="jdbc:mysql://localhost:3306/learning" />
+			<property name="username" value="root" />
+			<property name="password" value="123456" 
+			/>
+		-->
+		<!-- 使用properties来配置 -->
+		<property name="driverClassName">
+			<value>${jdbc_driverClassName}</value>
+		</property>
+		<property name="url">
+			<value>${jdbc_url}</value>
+		</property>
+		<property name="username">
+			<value>${jdbc_username}</value>
+		</property>
+		<property name="password">
+			<value>${jdbc_password}</value>
+		</property>
+	</bean>
+
+	<!-- 自动扫描了所有的XxxxMapper.xml对应的mapper接口文件，这样就不用一个一个手动配置Mpper的映射了，只要Mapper接口类和Mapper映射文件对应起来就可以了。 -->
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.dms.dao" />
+	</bean>
+
+	<!-- 配置Mybatis的文件 ，mapperLocations配置**Mapper.xml文件位置，configLocation配置mybatis-config文件位置 -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations" value="classpath*:mybatis/web/**/*.xml" />
+		<property name="configLocation" value="classpath:mybatis/mybatis-config.xml" />
+ 	</bean> 
+ 
+ 	<!-- 自动扫描注解的bean -->
+	<context:component-scan base-package="com.dms.service" />
+	
+	
+	<bean name="txManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+	
+	 <!-- 配置事务特性 -->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="add*" propagation="REQUIRED" isolation="DEFAULT"
+                rollback-for="Exception" />
+            <tx:method name="insert*" propagation="REQUIRED" isolation="DEFAULT"
+                rollback-for="Exception" />                
+            <tx:method name="delete*" propagation="REQUIRED" isolation="DEFAULT"
+                rollback-for="Exception" />
+            <tx:method name="update*" propagation="REQUIRED" isolation="DEFAULT"
+                rollback-for="Exception" />
+            <tx:method name="save*" propagation="REQUIRED" isolation="DEFAULT"
+                rollback-for="Exception" />
+            <tx:method name="create*" propagation="REQUIRED" isolation="DEFAULT"
+                rollback-for="Exception" />
+            <tx:method name="getExpressBuss" propagation="REQUIRED"
+                isolation="DEFAULT" rollback-for="Exception" />
+            <tx:method name="getInvoiceInfo" propagation="REQUIRED"
+                isolation="DEFAULT" rollback-for="Exception" />
+            <tx:method name="*" read-only="true" />
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- 配置哪些类的方法需要进行事务管理 -->
+    <aop:config>
+        <aop:pointcut id="allServiceMethod"
+            expression="execution(* com.dms.service..*.*(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="allServiceMethod" />
+    </aop:config> 
+
+	<!--声明业务组件使用注解生成事务代理 --> 
+	<tx:annotation-driven transaction-manager="txManager" />
+</beans>

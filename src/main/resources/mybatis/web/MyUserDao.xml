@@ -1,0 +1,71 @@
+ <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dms.dao.MyUserDao">
+	<!--设置User类和数据库中表的字段一一对应 -->
+	<resultMap id="userResultMap" type="com.dms.entity.MyUser">
+		<result column="id" property="id" jdbcType="INTEGER" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+		<result column="truecount" property="truecount" jdbcType="INTEGER" />
+		<result column="falsecount" property="falsecount" jdbcType="INTEGER" />
+		<result column="correctRate" property="correctRate" jdbcType="VARCHAR" />
+	</resultMap>
+	<!-- 查询单条记录 -->
+	<select id="selectByNamePassword" parameterType="com.dms.entity.MyUser"
+		resultMap="userResultMap">
+		select id, name, password,email,role,status
+		from user
+		where name=#{name} and password=#{password}
+	</select>
+	
+	   <select id="selectByEmailPassword" parameterType="com.dms.entity.MyUser"
+		resultMap="userResultMap">
+		select id, name, password,email,role,status
+		from user
+		where email=#{email} and password=#{password}
+	</select>
+	
+	
+	<!-- 查询邮箱是否已经存在 -->
+	<select id="selectByEmail" resultMap="userResultMap">
+		select id, name, password,email,role,status from user
+		where email=#{email}
+	</select>
+	
+	<!-- 查询用户名是否已经存在 -->
+	<select id="selectByName" resultMap="userResultMap">
+		select id, name, password,email,role,status from user
+		where name=#{name}
+	</select>
+	<!-- 添加单条用户记录 -->
+	<insert id="insertUser" parameterType="com.dms.entity.MyUser">
+		insert into user
+		(name,password,email,role,status) values
+		(#{name},#{password},#{email},#{role},#{status})
+	</insert>
+	<!-- 更新单条用户记录 -->
+	<update id="updateUser" parameterType="com.dms.entity.MyUser">
+		update user
+		set name = #{name},
+	 password= #{password},
+	 email = #{email},
+	 role= #{role},
+	 status=#{status}
+		where id = #{id}
+	</update>
+		<select id="list" resultMap="userResultMap">
+		select * from user 
+	</select>
+	
+	<delete id="deleteUser" parameterType="com.dms.entity.MyUser">
+    delete	from user
+		where id=#{id}
+	</delete>
+	
+		<!-- 查询用户名是否已经存在 -->
+	<select id="selectById" resultMap="userResultMap">
+		select id, name, password,email,role,status from user
+		where id=#{id}
+	</select>
+	
+</mapper>

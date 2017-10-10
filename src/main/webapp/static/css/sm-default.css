@@ -1,0 +1,890 @@
+
+   /*-------------------------------------
+    *
+    *   storymill default styles
+    *
+    *   override in /includes/styles.css
+    *
+    *------------------------------------*/
+
+
+   /** misc **/
+
+   .label
+   {
+
+   }
+
+   .labelRequired
+   {
+      color: red;
+   }
+
+   .question
+   {
+      font-size: 110%;
+   }
+
+   .error
+   {
+      color: red;
+      font-weight: bold;
+      font-size: 120%;
+   }
+
+   .message
+   {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      text-align: center;
+   }
+
+   /** login page **/
+
+   .loginTable
+   {
+      color: #8A0F00;
+      font-size: 1em;
+      line-height: 1em;
+   }
+
+   .loginHeader
+   {
+      color: #8A0F00;
+      font-size: 1.4em;
+      line-height: 3em;
+   }
+
+   .loginLabel
+   {
+      padding: 0.5em;
+   }
+
+   .loginBox
+   {
+      font-size: .8em;
+      background-color: #FBE4BB;
+   }
+
+   .loginBox td
+   {
+      padding-top: 2px 0 0 0;
+      text-align: right;
+   }
+
+
+   /** miniMenu */
+
+   .miniMenu
+   {
+   }
+
+   /** admin menu page **/
+
+   .adminMenu
+   {
+   }
+
+   .adminMenu table
+   {
+      padding: 0;
+      border: solid 1px gray;
+      background-color: #CCFFCC;
+      font-size: 1.2em;
+   }
+
+   .adminMenu th
+   {
+      font-weight: normal;
+   }
+
+   .adminMenu td
+   {
+      width: 5em;
+      padding: 1.5em 1.5em 1.5em 1.5em;
+      text-align: center;
+   }
+
+   .adminMenu td a:visited, .adminMenu td a:link
+   {
+      font-size: 1em;
+      color: #330033;
+      text-decoration: none;
+   }
+
+   .adminMenu td a:hover
+   {
+      color: red;
+      text-decoration: none;
+   }
+
+
+   /** admin list pages **/
+
+   .listBarTable
+   {
+      width: 100%;
+   }
+
+   .listBar
+   {
+      font-size: 1em;
+      color: black;
+   }
+
+   .listBar h1
+   {
+      font-size: 1.5em;
+      font-weight: bold;
+   }
+
+   .listBar a:link, .listBar a:visited
+   {
+      text-decoration: underline;
+   }
+
+   .adminActionTable
+   {
+      width: 100%;
+   }
+
+   .adminListTable
+   {
+      width: 100%;
+      background: gray;
+   }
+
+   .adminListTable th
+   {
+      padding: 0.5em;
+      background-color: black;
+      font-weight: normal;
+      color: yellow;
+   }
+
+   .adminListTable th a:link, .adminListTable th a:visited
+   {
+      color: yellow;
+      text-decoration: underline;
+   }
+
+   .adminListTable td
+   {
+      padding: 10px;
+   }
+
+   .adminListTable td a:link, .adminListTable td a:visited
+   {
+      font-size: 1.2em;
+      color: blue;
+      text-decoration: underline;
+   }
+
+
+   /* authorMenu */
+
+   .authorMenu
+   {
+      border-top: 1px solid gray;
+      padding-top: 5px
+   }
+
+   .authorMenu ul
+   {
+      margin: 0;
+      padding: 0;
+      font-size: 10px;
+      text-align: right;
+      color: #771527;
+      white-space: nowrap;
+      vertical-align: bottom;
+   }
+
+   .authorMenu li
+   {
+      list-style-type: none;
+      display: inline;
+   }
+
+   .authorMenu li a:link, .authorMenu li a:visited
+   {
+       text-decoration: none;
+       font-size: 12px;
+       font-weight: normal;
+       color: #731128;
+       padding-left: 10px;
+       padding-right: 0px;
+       letter-spacing: .02em;
+   }
+
+   .authorMenu li a:hover
+   {
+      color: red;
+   }
+
+
+   /** stats menu **/
+
+   .statsMenuTable
+   {
+      font-size: 1em;
+   }
+
+   .statsMenuCell
+   {
+      padding: 0.8em;
+   }
+
+
+   /** bio list */
+
+   #bioListTable
+   {
+      margin: 0 auto;
+      width: 80%;
+      font-size: 14px;
+   }
+
+   .bioListTableCategory
+   {
+      width: 20%;
+      text-align: right;
+      margin: 0;
+      padding: 0 20px 0 0;
+      white-space: nowrap;
+
+   }
+
+   .bioListTableThumb
+   {
+      text-align: right;
+      padding: 5px;
+   }
+
+   .bioListTableDetail
+   {
+      text-align: left;
+      padding: 5px 10px 10px 10px;
+      white-space: nowrap;
+   }
+
+
+   /** bio page */
+
+   #bioPageTable
+   {
+      margin: 0 auto;
+      width: 80%;
+      font-size: 14px;
+   }
+
+   .bioPageImage
+   {
+      text-align: left;
+      padding: 15px;
+      width: 180px;
+   }
+
+   .bioPageDetail
+   {
+      text-align: left;
+      padding: 5px 10px 20px 10px;
+      white-space: nowrap;
+   }
+
+   .bioPageText
+   {
+      padding: 15px 15px 15px 15px;
+   }
+
+
+   /** articles */
+
+   .articleTable
+   {
+      width: 100%;
+   }
+
+   .articleLeftColumn
+   {
+
+   }
+
+   .articleContentColumn
+   {
+   }
+
+   .articleRightColumn
+   {
+
+   }
+
+   .articleAttachIcon
+   {
+      padding: 20px;
+   }
+
+   .articleBody
+   {
+      margin-bottom: 2em;
+   }
+
+   .articleEmbeddedImage
+   {
+      float: right;
+      padding: 0 0px 20px 20px;
+   }
+
+   /** place list */
+
+   #placeList
+   {
+      margin: 0 auto;
+      width: 100%;
+      font-size: 14px;
+   }
+
+    .placeListThumb
+   {
+      text-align: right;
+      margin: 0px 15px 30px 15px;
+      float: left;
+   }
+
+   .placeListDetail
+   {
+      text-align: left;
+      margin: 0px 15px 30px 15px;
+   }
+
+
+   /** place page */
+
+   #placePage
+   {
+      margin: 0 auto;
+      width: 80%;
+      font-size: 14px;
+   }
+
+   .placePageImage
+   {
+      text-align: left;
+      padding: 15px;
+      width: 180px;
+   }
+
+   .placePageDetail
+   {
+      text-align: left;
+      padding: 5px 10px 20px 10px;
+   }
+
+   .placePageText
+   {
+      padding: 15px 15px 15px 15px;
+   }
+
+
+   /** mailing */
+
+   .mailing
+   {
+      text-align: left;
+      background-color: white;
+      width: 550px;
+      border: 1px gray solid;
+      padding: 30px;
+      margin: 0;
+   }
+
+   .mailingContent
+   {
+
+   }
+
+   .mailingFooter
+   {
+      font-size: 90%;
+      padding-top: 10px;
+   }
+
+
+   /** mailing banner */
+
+   .mailingBanner
+   {
+   }
+
+   .mailingBanner li
+   {
+      margin-left: 1em;
+   }
+
+   .mailingLogo
+   {
+      padding: 0 20px 20px 0px;
+      vertical-align: middle;
+   }
+
+   .mailingInfoLine
+   {
+      text-align: center;
+      color: gray;
+      font-size: 90%;
+      padding-top: 5px;
+   }
+
+   .mailingInfoLine a:link, .mailingInfoLine a:visited
+   {
+      color: gray;
+      text-decoration: underline;
+   }
+
+   .mailingButton
+   {
+      padding: 10px 0px 20px 0px;
+      vertical-align: middle;
+   }
+
+   .mailingBannerTable
+   {
+      width: 100%;
+      padding: 10px;
+      line-height: 1em;
+   }
+
+   .mailingBannerNameCell
+   {
+      text-align: center;
+   }
+
+   .mailingBannerContentsCell
+   {
+      font-size: 90%;
+      padding: 0 0 0 10px;
+      width: 100%;
+   }
+
+
+   .mailingTocTable
+   {
+      width: 100%;
+      line-height: 1em;
+      padding: 0;
+   }
+
+   .mailingTocNameCell
+   {
+      text-align: center;
+      width: 30%;
+      padding: 10px;
+      border: solid 1px lightblue;
+      border-right: 0px;
+   }
+
+   .mailingTocContentsCell
+   {
+      font-size: 90%;
+      padding: 5px;
+      width: 70%;
+      padding: 20px;
+      border: solid 1px lightblue;
+   }
+
+
+   /** mailing intro */
+
+   .mailingIntroBox
+   {
+      border: 1px solid lightgray;
+      width: 100%;
+      margin-bottom: 20px;
+   }
+
+   .mailingIntroName
+   {
+      padding: 0;
+      margin: 0;
+      height: 1.2em;
+      text-align: center;
+      width: 30%;
+   }
+
+   .mailingIntroName h2
+   {
+      padding: 0;
+   }
+
+   .mailingIntroText
+   {
+      text-align: left;
+      width: 70%;
+   }
+
+
+   /** mailing articles */
+
+   .mailingArticleDivider
+   {
+      width: 100%;
+      padding-top: 10px;
+      border-bottom: 1px solid #A0A0A0;
+      clear: both;
+   }
+
+
+   .mailingArticlePhotoFull
+   {
+      padding-top: 0px;
+      padding-bottom: 20px;
+      text-align: center;
+   }
+
+   .mailingArticlePhotoThumb
+   {
+      padding: 0 0 20px 15px;
+      text-align: right;
+      vertical-align: top;
+      float: right;
+   }
+
+   /** mailing list */
+
+   .mailingListTable
+   {
+      padding: 10px;
+      margin-bottom: 30px;
+      width: 100%;
+      border: 1px solid gray;
+   }
+
+   .mailingListNameCell
+   {
+      width: 30%;
+      text-align: center;
+   }
+
+   .mailingListContentsCell
+   {
+      width: 70%;
+      font-size: 90%;
+      padding: 10px;
+   }
+
+
+   .subscribeLink
+   {
+      font-size: 10px;
+      text-align: right;
+      margin: 25px 0px -25px 0px;
+   }
+
+
+   /** campaigns **/
+
+   .campaignActionBar
+   {
+      border: 1px solid black;
+      width: 100%;
+      background-color: lightgray;
+      padding: 10px;
+   }
+
+   .campaignActionBarName
+   {
+      font-size: 1.2em;
+      font-weight: bold;
+   }
+
+
+   /** purchases */
+
+   .purchaseReceipt
+   {
+      text-align: left;
+      background-color: white;
+      width: 550px;
+      border: 1px gray solid;
+      padding: 30px;
+      margin: 0;
+   }
+
+   .purchaseReceipt h1
+   {
+      text-align: left;
+   }
+
+   .purchaseAdminBox
+   {
+      margin-top: 50px;
+      background-color: lightgray;
+      border: 1px solid black;
+   }
+
+
+   /** widgets */
+
+   .widgetTable
+   {
+      padding: 15px 30px 0 30px;
+   }
+
+   .widgetButton
+   {
+      text-align: right;
+      padding-right: 15px;
+      padding-bottom: 5px;
+   }
+
+   .widgetName
+   {
+      font-weight: bold;
+   }
+
+   .widgetName a
+   {
+      text-decoration: none;
+      color: black;
+   }
+
+   .widgetDescription
+   {
+      padding-right: 80px;
+   }
+
+   .commentTable
+   {
+      border: none;
+      width: 100%;
+   }
+
+   .commentTable h3
+   {
+      padding: 5px 15px 0 15px;
+   }
+
+   .commentTable p
+   {
+      padding: 0 15px;
+      font-size: 110%;
+   }
+
+   /** storybot */
+
+   .botHeaderTable
+   {
+      width: 100%;
+      border: 1px solid darkgray;
+      margin-bottom: 20px;
+      padding: 10px;
+   }
+
+   .botHeaderTable td
+   {
+      padding: 5px;
+   }
+
+   .botHeaderDate
+   {
+      width: 60%;
+   }
+
+   .botHeaderStatus
+   {
+      width: 40%;
+      text-align: right;
+   }
+
+   .botSentenceTable
+   {
+   }
+
+   .botSentence
+   {
+      font-family: Courier, serif;
+      font-style: normal;
+
+   }
+
+   .botSentenceStamp
+   {
+      padding-right: 20px;
+      font-size: 90%;
+      vertical-align: top;
+   }
+
+   .botSentenceStamp a,.botSentenceStamp a:link,.botSentenceStamp a:visited, botSentenceStamp a:hover
+   {
+      color: #003399;
+   }
+
+   .botSentenceNick
+   {
+      padding-right: 15px;
+      vertical-align: top;
+      text-align: right;
+   }
+
+   .botSentenceNick a,.botSentenceNick a:link,.botSentenceNick a:visited, botSentenceNick a:hover
+   {
+      text-decoration: none;
+   }
+
+   .botSentenceMessage
+   {
+
+   }
+
+   .botNavLinks
+   {
+   }
+
+   .botNavLinks ul
+   {
+      margin: 0;
+      padding: 0
+   }
+
+   .botNavLinks li
+   {
+      color: black;
+      text-decoration: none;
+      display: inline;
+      padding-left: 0px;
+      padding-right: 15px;
+      line-height: 1.5em;
+      letter-spacing: .02em;
+      margin: 0;
+   }
+
+   botNavLinks li a,.botNavLinks li a:link,.botNavLinks li a:visited
+   {
+      color: blue;
+   }
+
+   .botNavLinks li a:hover
+   {
+      color: #FF6600;
+   }
+
+   .articleAccountLink
+   {
+      font-weight: normal;
+   }
+
+   .projectLink
+   {
+      margin: -20px;
+      text-align: center;
+      font-size: 90%;
+   }
+
+   .projectLink a,.botSentenceStamp a:link,.botSentenceStamp a:visited, botSentenceStamp a:hover
+   {
+      color: black;
+      font-size: 90%;
+   }
+
+   .sqlTable
+   {
+      margin-top: 10px;
+      background: black;
+   }
+
+   .sqlTableHeader td
+   {
+      padding: 5px 15px;
+      color: yellow;
+      background: #003399;
+      text-align: center;
+   }
+
+   .sqlTableRow td
+   {
+      padding: 5px 15px;
+      background: white;
+      text-align: center;
+   }
+
+   /* dash */
+   #dash
+   {
+      padding: 10px;
+   }
+
+   #topBar
+   {
+      padding-bottom: 20px;
+   }
+
+   #bottomBar
+   {
+      padding-top: 20px;
+      clear: both;
+   }
+
+   #dashLeft
+   {
+      float: left;
+      width: 42%;
+      border: 1px lightgray solid;
+      padding: 10px 20px;;
+   }
+
+   #dashRight
+   {
+      float: right;
+      width: 42%;
+      border: 1px lightgray solid;
+      padding: 10px 20px;;
+   }
+
+   #dash ul
+   {
+      list-style-type: none;
+      padding: 5px 0px;
+   }
+
+   #dash li
+   {
+      padding-top: 15px;
+   }
+
+   .dateLine
+   {
+      color: gray;
+      font-size: 95%;
+      border-bottom: 1px gray solid;
+   }
+
+   .dashSep
+   {
+      border-bottom: 1px lightgray solid;
+   }
+   
+   
+      <style type="text/css">
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+table.gridtable th {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #dedede;
+}
+table.gridtable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #666666;
+	background-color: #ffffff;
+}
+</style>

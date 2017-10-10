@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd
+       http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+	   http://www.springframework.org/schema/tx 
+	   http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+       ">   
+ 	<mvc:annotation-driven /> 
+	<mvc:default-servlet-handler/> 
+		
+   <mvc:interceptors>
+        <mvc:interceptor>
+        <!--默认拦截的连接-->
+            <mvc:mapping path="/*"/>
+            <!--不拦截的连接-->
+             <mvc:exclude-mapping path="/"/>
+            <mvc:exclude-mapping path="/to_login"/>
+               <mvc:exclude-mapping path="/login"/>
+             <mvc:exclude-mapping path="/to_login2"/>
+                 <mvc:exclude-mapping path="/login2"/>
+             <mvc:exclude-mapping path="/to_reginster"/>
+              <mvc:exclude-mapping path="/about"/>
+            <bean class="com.dms.controller.PermissionInterceptor"></bean>
+        </mvc:interceptor>  
+    </mvc:interceptors> 
+	
+	
+	<!-- 扫描controller（controller层注入） -->
+	<context:component-scan base-package="com.dms.controller" /> 
+	<context:component-scan base-package="com.json" />           
+	
+	<!-- 静态资源映射 -->
+	 <mvc:resources mapping="/static/js/**" location="/static/js/" /> 
+
+ 
+	  
+	<!-- 对模型jsp视图添加前后缀 -->
+	<bean
+		id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	    <property name="prefix" value="/WEB-INF/view/"/>  
+    	<property name="suffix" value=".jsp"/><!--可为空,方便实现自已的依据扩展名来选择视图解释类的逻辑  -->  
+    	<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />  
+	 </bean> 
+</beans>
+
+   
