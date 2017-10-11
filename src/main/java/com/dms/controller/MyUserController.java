@@ -31,6 +31,16 @@ public class MyUserController {
     ModelAndView mav = new ModelAndView("index");
     return mav;
   }
+  
+  @RequestMapping(value = "/userlist", method = RequestMethod.GET)
+  public ModelAndView userlist() {
+    ModelAndView mav ;
+    List<MyUser> list = userService.findAll();
+  
+    mav = new ModelAndView("User/userlist"); 
+    mav.addObject("list", list);
+    return mav;
+  }
 
   /**
    * 登录系统 教学内容：post方式传输页面，页面参数转换，session用法

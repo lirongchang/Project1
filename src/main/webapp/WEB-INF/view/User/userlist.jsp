@@ -28,18 +28,30 @@
 		</tr>
 	</table> 
 	<table> 
-		<c:forEach items="${list}" var="user" varStatus="users">
+	
 			<tr> 
+			
+			       <td>序号</td>
+			        <td>账号 </td>
+			        <td>用户名 </td>
+			        <td>密码 </td>
+			        <td>角色 </td>  
+			        <td>状态: </td>  
+			        <td> 操作</td>
+			        <td> 操作</td>
+			</tr>
+				<c:forEach items="${list}" var="user" varStatus="users">
+			<tr>
 				<td align="center">${users.index+1}</td> 
-				<%-- <td align="center"><a href ="doquestion/get?userid=${user.id}" >${user.name}  <b>密码 ${user.password}</b></a></td>  --%>
-			    <td>账号:${user.email}</td>
-			        <td>用户名:${user.name}</td>
-			        <td>密码:${user.password}</td>
-			        <td>角色:${user.role}</td>  
-			          <td>状态:${user.status}</td>  
+				    <td> ${user.email}</td>
+			        <td> ${user.name}</td>
+			        <td> ${user.password}</td>
+			        <td> ${user.role}</td>  
+			          <td> ${user.status}</td>  
 			        <td><a href ="deleteUser?id=${user.id}" >删除</a></td>
 			        <td><a href ="updateUser?id=${user.id}" >更新</a></td>
 			</tr>
+			
 		</c:forEach> 
 	</table> 
 </body>

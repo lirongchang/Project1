@@ -1,7 +1,5 @@
 package com.dms.dao;
-
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +8,8 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.dms.entity.MyUser;
-
 import junit.framework.Assert;
-
 //需要用到的配置
 @ContextConfiguration(locations = { "classpath:spring/application-mvc.xml", "classpath:spring/application.xml",
 		"classpath:mybatis/mybatis-config.xml" })

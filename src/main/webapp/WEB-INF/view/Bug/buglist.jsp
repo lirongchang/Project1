@@ -20,62 +20,67 @@
 <body>
 	<table width="100%">
 		<tr>
-			<td>项目列表</td>
+			<td>缺陷列表</td>
 			<td><a href="to_addbug" target="_self">新增</a></td>
 		</tr>
 	</table>
 	<table>
+	<tr align="center">
+				<td>序号</td>
+				<td>名称  </td>
+				<td>描述 </td>
+				<td>系统 </td>
+				<td>严重级别 </td>
+				<td>所属项目 </td>
+				<td>缺陷状态 </td>
+                <td>提交人 </td>
+                <td>处理人  </td>
+				<td>评论 </td>
+				<td>优先级 </td>
+			<!-- 	<td>提交时间: </td> -->
+                 <td> 操作</td>
+			     <td> 操作</td>
+			</tr>
 		<c:forEach items="${list}" var="bug" varStatus="bugs">
-            
-			<tr align="center">
+	 	<tr align="center">
 				<td>${bugs.index+1}</td>
-				<td>名称:${bug.bug_summary}</td>
-				<td>描述:${bug.bug_description}</td>
-				<td>系统${bug.bug_os}</td>
-				<td>严重级别:${bug.pon_id}</td>
-				<%-- <td>所属项目:${bug.pro_id}</td> --%>
-				
-				<td>
+				<td> ${bug.bug_summary}</td>
+				<td> ${bug.bug_description}</td>
+				<td> ${bug.bug_os}</td>
+				<td> ${bug.pon_id}</td>
+			  	 
 				<c:forEach items="${pros}" var="pro" varStatus="users">
-					<%-- <td>提交人:${bug.reporter_id}</td> --%>
+				 
 					<c:if test="${bug.pro_id==pro.pro_id}">
-						<td>所属项目:${pro.pro_name}</td>
+						<td> ${pro.pro_name}</td>
 					</c:if>
 				</c:forEach>
-                </td>
+                
 				
-				
-				<td>缺陷状态${bug.bug_status}</td>
-                <td>
+				<td> ${bug.bug_status}</td>
+             
 				<c:forEach items="${users}" var="user" varStatus="users">
-					<%-- <td>提交人:${bug.reporter_id}</td> --%>
+			 
 					<c:if test="${bug.reporter_id==user.id}">
-						<td>提交人:${user.name}</td>
+						<td> ${user.name}</td>
 					</c:if>
 				</c:forEach>
-                </td>
 
-
-              <td>
+            
 				<c:forEach items="${users}" var="user" varStatus="users">
-					<%-- <td>提交人:${bug.reporter_id}</td> --%>
+		 
 					<c:if test="${bug.handler_id==user.id}">
-						<td>处理人:${user.name}</td>
+						<td> ${user.name}</td>
 					</c:if>
 				</c:forEach>
-                </td>
-
-
-		<%-- 		<td>处理人:${bug.handler_id}</td> --%>
-				<td>评论:${bug.bug_comment}</td>
-				<td>优先级:${bug.bug_priority}</td>
-				<td>提交时间:${bug.submite_time}</td>
+                 
+				<td> ${bug.bug_comment}</td>
+				<td> ${bug.bug_priority}</td>
+				 
                  <td><a href ="deletebug?bug_id=${bug.bug_id}" >删除</a></td>
 			     <td><a href ="to_updatebug?bug_id=${bug.bug_id}" >更新</a></td>
-
-				<%-- 	<td>评论:${bug.bug_comment}</td>  
-			<td>优先级:${bug.bug_priority}</td> --%>
 			</tr>
+	 
 	 
 		</c:forEach>
 	</table>
